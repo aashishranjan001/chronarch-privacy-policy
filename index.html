@@ -1,172 +1,304 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy for Chronarch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
+        :root {
+            /* Chronarch Brand Palette */
+            --primary: #904A42;
+            --text-main: #231918;
+            --text-muted: #857370;
+            --bg-page: #FFF8F7;
+            --bg-card: #ffffff;
+            --border: #F5DDDA;
         }
 
-    h1 {
-        line-height: 1.2;
-        margin-bottom: 8px;
-    }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    h2 {
-        margin-top: 32px;
-    }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-page);
+            padding: 40px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
 
-    p {
-        margin: 12px 0;
-    }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            padding: 60px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border);
+        }
 
-    li {
-        margin-bottom: 10px;
-    }
+        header {
+            margin-bottom: 48px;
+            border-bottom: 2px solid var(--bg-page);
+            padding-bottom: 24px;
+        }
 
-    a {
-        color: inherit;
-    }
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
 
-    .effective-date {
-        color: #666;
-        margin-top: 0;
-    }
+        .effective-date {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+        }
+
+        .effective-date strong {
+            font-weight: 600;
+            color: var(--text-main);
+            margin-right: 4px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 48px;
+            margin-bottom: 16px;
+            color: #0f172a;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background-color: var(--primary);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        ul {
+            margin: 24px 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 16px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        li strong {
+            color: #0f172a;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        footer {
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 20px 10px;
+            }
+            .container {
+                padding: 32px 20px;
+                border-radius: 12px;
+            }
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+            }
+        }
     </style>
-
 </head>
 <body>
 
-<h1>Privacy Policy for Chronarch</h1>
+<main class="container">
+    <header>
+        <h1>Privacy Policy for Chronarch</h1>
+        <p class="effective-date">
+            <strong>Effective Date:</strong> August 28, 2026
+        </p>
+    </header>
 
-<p class="effective-date">
-    <strong>Effective Date: August 28, 2026</strong>
-</p>
+    <section>
+        <p>
+            Chronarch ("we", "us", or "our") operates the Chronarch mobile
+            application (the "App"). This Privacy Policy explains how the App
+            handles information when you use it.
+        </p>
+    </section>
 
-<p>
-    Chronarch ("we", "us", or "our") operates the Chronarch mobile
-    application (the "App"). This Privacy Policy explains how the App
-    handles information when you use it.
-</p>
+    <section>
+        <h2>1. Information Collection and Use</h2>
+        <p>
+            <strong>Chronarch is designed with privacy as a priority.</strong>
+        </p>
+        <ul>
+            <li>
+                <strong>Personal Information:</strong>
+                We do not collect, store, or transmit personal information such
+                as your name, email address, phone number, or location.
+            </li>
+            <li>
+                <strong>App Data:</strong>
+                The App stores information you create while using its features,
+                such as timer sessions, focus points, rewards, and history.
+                This information is stored locally on your device and is not
+                uploaded to our servers or shared with third parties.
+            </li>
+            <li>
+                <strong>No Server Storage:</strong>
+                Chronarch does not operate a server or backend that receives
+                or stores your App data.
+            </li>
+        </ul>
+    </section>
 
-<h2>1. Information Collection and Use</h2>
+    <section>
+        <h2>2. Permissions and Internet Access</h2>
+        <p>
+            Chronarch does not require access to sensitive device features
+            such as your camera, microphone, or location.
+        </p>
+        <p>
+            The App does not require an Internet connection and does not
+            transmit your App data over the Internet.
+        </p>
+    </section>
 
-<p>
-    <strong>Chronarch is designed with privacy as a priority.</strong>
-</p>
+    <section>
+        <h2>3. Data Storage and Security</h2>
+        <p>
+            All data created within the App remains on your device. Because we
+            do not receive or store this data, we cannot access or recover it.
+        </p>
+        <p>
+            We recommend using the built-in security features of your device,
+            such as a passcode or biometric authentication, to help protect
+            the information stored on your device.
+        </p>
+        <p>
+            If you uninstall the App or clear its data through your device
+            settings, data stored by the App, including your session history
+            and earned focus points, may be permanently deleted.
+        </p>
+    </section>
 
-<ul>
-    <li>
-        <strong>Personal Information:</strong>
-        We do not collect, store, or transmit personal information such
-        as your name, email address, phone number, or location.
-    </li>
-    <li>
-        <strong>App Data:</strong>
-        The App stores information you create while using its features,
-        such as timer sessions, focus points, rewards, and history.
-        This information is stored locally on your device and is not
-        uploaded to our servers or shared with third parties.
-    </li>
-    <li>
-        <strong>No Server Storage:</strong>
-        Chronarch does not operate a server or backend that receives
-        or stores your App data.
-    </li>
-</ul>
+    <section>
+        <h2>4. Third-Party Services</h2>
+        <p>
+            Chronarch does not use third-party analytics, advertising,
+            tracking, or similar services.
+        </p>
+        <p>
+            We do not share your App data with third parties.
+        </p>
+    </section>
 
-<h2>2. Permissions and Internet Access</h2>
+    <section>
+        <h2>5. Children's Privacy</h2>
+        <p>
+            Chronarch does not knowingly collect personal information from
+            children or any other users.
+        </p>
+        <p>
+            Because the App does not collect personal information, children
+            can use the App without providing personal information to us.
+        </p>
+    </section>
 
-<p>
-    Chronarch does not require access to sensitive device features
-    such as your camera, microphone, or location.
-</p>
+    <section>
+        <h2>6. Changes to This Privacy Policy</h2>
+        <p>
+            We may update this Privacy Policy from time to time. If we make
+            changes, we will update the "Effective Date" at the top of this
+            page and publish the updated Privacy Policy at this URL.
+        </p>
+        <p>
+            You are encouraged to review this Privacy Policy periodically
+            for any changes.
+        </p>
+    </section>
 
-<p>
-    The App does not require an Internet connection and does not
-    transmit your App data over the Internet.
-</p>
+    <section>
+        <h2>7. Contact Us</h2>
+        <p>
+            If you have any questions about this Privacy Policy, you can
+            contact us:
+        </p>
+        <ul>
+            <li>
+                <strong>By email:</strong>
+                <a href="mailto:aashishranjan.pwork@gmail.com">aashishranjan.pwork@gmail.com</a>
+            </li>
+            <li>
+                <strong>Through the contact information provided on the
+                    Google Play Store</strong>
+            </li>
+        </ul>
+    </section>
 
-<h2>3. Data Storage and Security</h2>
-
-<p>
-    All data created within the App remains on your device. Because we
-    do not receive or store this data, we cannot access or recover it.
-</p>
-
-<p>
-    We recommend using the built-in security features of your device,
-    such as a passcode or biometric authentication, to help protect
-    the information stored on your device.
-</p>
-
-<p>
-    If you uninstall the App or clear its data through your device
-    settings, data stored by the App, including your session history
-    and earned focus points, may be permanently deleted.
-</p>
-
-<h2>4. Third-Party Services</h2>
-
-<p>
-    Chronarch does not use third-party analytics, advertising,
-    tracking, or similar services.
-</p>
-
-<p>
-    We do not share your App data with third parties.
-</p>
-
-<h2>5. Children's Privacy</h2>
-
-<p>
-    Chronarch does not knowingly collect personal information from
-    children or any other users.
-</p>
-
-<p>
-    Because the App does not collect personal information, children
-    can use the App without providing personal information to us.
-</p>
-
-<h2>6. Changes to This Privacy Policy</h2>
-
-<p>
-    We may update this Privacy Policy from time to time. If we make
-    changes, we will update the "Effective Date" at the top of this
-    page and publish the updated Privacy Policy at this URL.
-</p>
-
-<p>
-    You are encouraged to review this Privacy Policy periodically
-    for any changes.
-</p>
-
-<h2>7. Contact Us</h2>
-
-<p>
-    If you have any questions about this Privacy Policy, you can
-    contact us:
-</p>
-
-<ul>
-    <li>
-        <strong>By email:</strong>
-        <a href="mailto:aashishranjan.pwork@gmail.com">aashishranjan.pwork@gmail.com</a>
-    </li>
-    <li>
-        <strong>Through the contact information provided on the
-            Google Play Store</strong>
-    </li>
-</ul>
+    <footer>
+        <p>&copy; 2026 Chronarch. All rights reserved.</p>
+    </footer>
+</main>
 
 </body>
 </html>
