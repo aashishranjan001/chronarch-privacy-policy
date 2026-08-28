@@ -77,17 +77,17 @@
             margin-bottom: 16px;
             color: #0f172a;
             display: flex;
-            align-items: center;
+            align-items: stretch;
         }
 
         h2::before {
             content: "";
             display: inline-block;
             width: 4px;
-            height: 24px;
             background-color: var(--primary);
             margin-right: 12px;
             border-radius: 2px;
+            flex-shrink: 0;
         }
 
         p {
